@@ -9,10 +9,14 @@ export default class AddTaskModal extends Component {
         return (
             <div>
                 <Modal
-                    header='Modal Header'
+                    id={'add-task-modal'}
+                    header={`${this.props.task ? 'Edit' : 'Add'} your task`}
                     fixedFooter
-                    trigger={<Button>Add task</Button>}>
-                    <AddTimeForm updateFunc={this.props.updateFunc}/>
+                    trigger={<Button className={this.props.className}>{
+                        this.props.buttonText ? this.props.buttonText : `Add task`
+                    }</Button>}>
+                    <AddTimeForm task={this.props.task} mode={this.props.task ? 'edit' : 'add'}
+                                 updateFunc={this.props.updateFunc}/>
                 </Modal>
             </div>
         );

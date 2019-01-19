@@ -3,6 +3,9 @@ import {Row, Input, Button, Table, ProgressBar, Col} from 'react-materialize'
 import {NotificationManager} from 'react-notifications';
 import {SET_TASKS} from "../../constants/taskActionTypes";
 import {connect} from "react-redux";
+import AddTaskModal from "../modal/addTaskModal";
+import AcceptModal from "../modal/AcceptModal";
+import axios from 'axios';
 
 export class TaskList extends Component {
 
@@ -13,9 +16,7 @@ export class TaskList extends Component {
     componentDidMount(){
         if (this.props.loadTasks){
             this.props.loadTasks().then(data=>{
-                console.log(data);
                 this.props.setTasks(data.data);
-                console.log(this.props.tasks);
                 this.setState({initial: false});
             });
         }else{
@@ -23,6 +24,20 @@ export class TaskList extends Component {
             NotificationManager.info("no content")
         }
     }
+
+
+    deleteFunc = async (id) => {
+        let formData = new FormData();
+        formData.append('id', id);
+        let resp = await axios.delete('/api/user/deleteTask',{data: formData, headers:  {auth: localStorage.getItem('Authorization')}}).then(response=>response).catch(err=>NotificationManager.warning(err.toString()))
+        if (resp){
+            if (resp.data.error){
+                NotificationManager.warning(resp.data.error);
+            }else {
+                NotificationManager.info("Status", "Deleted")
+            }
+        }
+    };
 
     render() {
         return (
@@ -52,8 +67,13 @@ export class TaskList extends Component {
                                             <td>{task.username}</td>
                                             <td>{(task.date)}</td>
                                             <td>{task.content}</td>
-                                            <td><Button className={'blue-grey lighten-1'}>Edit</Button></td>
-                                            <td><Button className={'deep-orange darken-4'}>Delete</Button></td>
+                                            <td><AddTaskModal className={'amber accent-4'}
+                                                              buttonText={'edit'}
+                                                              task={task}
+                                            /></td>
+                                            <td><AcceptModal button={<Button className={'deep-orange darken-4'}>Delete</Button>}
+                                            acceptFunc={this.deleteFunc}
+                                            parameterToFunc={task._id}/></td>
                                         </tr>
 
                                     })

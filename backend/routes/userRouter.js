@@ -25,4 +25,21 @@ router.post('/addTask', (req,resp)=>{
     })
 });
 
+router.delete('/deleteTask', (req,resp)=>{
+    let userInfo = security.getUserInfo(req);
+    let {id} = req.body;
+    console.log(id, typeof id);
+    if (id === 'undefined'){
+        resp.send({error: 'id is empty'})
+    }else{
+        Task.deleteOne({_id: id},err=>{
+            if (err){
+                resp.send({error: err.toString()});
+            }else{
+                resp.send({status: 'deleted'});
+            }
+        })
+    }
+});
+
 module.exports = router;

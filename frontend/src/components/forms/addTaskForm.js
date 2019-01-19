@@ -2,18 +2,32 @@ import React, {Component} from 'react';
 import {Row, Input, Button, Col} from 'react-materialize'
 import axios from 'axios';
 import {NotificationManager} from 'react-notifications';
+import {SET_TASKS} from "../../constants/taskActionTypes";
+import connect from "react-redux/es/connect/connect";
 
-export default class AddTaskForm extends Component {
+export class AddTaskForm extends Component {
 
-    state = {
-        time: '',
-        date: new Date(),
-        task: '',
-    };
+    constructor(props) {
+        super(props);
+        if (this.props.task){
+            this.state = {
+                date: new Date(this.props.task.date).toDateString(),
+                task: this.props.task.content
+            };
+            console.log(this.props.task);
+        }else{
+            this.state = {
+                date: new Date(),
+                task: '',
+            };
+        }
+
+
+    }
+
 
     changeInput = (e, valueDate) => {
         let timeStamp = e.timeStamp;
-        console.log(valueDate);
         if (e.target.id === 'date'){
             this.setState({
                 date: timeStamp
@@ -30,18 +44,20 @@ export default class AddTaskForm extends Component {
         let formData = new FormData();
         formData.append('date', this.state.date);
         formData.append('task', this.state.task);
-        let resp = await axios.post('/api/user/addTask', formData,{headers: {auth: localStorage.getItem('Authorization')}}).then(response=>response).catch(err=>NotificationManager.warning(err.toString()));
-        console.log(resp);
+        if (this.props.mode === 'edit'){
+            formData.append('id', this.props.task.id);
+        }
+        let resp = await axios.post(`/api/user/${this.props.mode}Task`, formData,{headers: {auth: localStorage.getItem('Authorization')}}).then(response=>response).catch(err=>NotificationManager.warning(err.toString()));
         if (resp.error){
             NotificationManager.warning(resp.error);
         }else{
-            NotificationManager.info("Success", "Added");
+            NotificationManager.success("Success", "Added");
             this.setState({
                 time: '',
-                date: new Date(),
-                task: '',
+                date: '',
+                task: ''
             });
-            this.props.updateFunc();
+            this.props.setTasks(this.props.updateFunc());
         }
     };
 
@@ -73,3 +89,19 @@ export default class AddTaskForm extends Component {
     }
 
 }
+const mapStateToProps = state => {
+    return {
+        tasks: state.taskReducer
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return ({
+        setTasks: (payload) => {
+            dispatch({
+                type: SET_TASKS, payload
+            })
+        }
+    });
+};
+export default connect(mapStateToProps, mapDispatchToProps)(AddTaskForm);
