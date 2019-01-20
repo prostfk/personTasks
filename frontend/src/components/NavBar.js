@@ -11,7 +11,6 @@ export default class NavBar extends Component {
     render() {
         return <div>
             <Navbar brand='| logo' className={'blue-grey'} color={'black'} right>
-                <NavItem onClick={() => this.link('/search')}><Icon>search</Icon></NavItem>
                 <NavItem onClick={() => this.link('/addTask')}><Icon>view_module</Icon></NavItem>
                 <NavItem onClick={() => this.link('/refresh')}><Icon>refresh</Icon></NavItem>
                 <NavItem onClick={() => this.link('/more_vert')}><Icon>more_vert</Icon></NavItem>

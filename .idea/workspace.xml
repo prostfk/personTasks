@@ -38,7 +38,7 @@
       <change afterPath="$PROJECT_DIR$/../maxpeep/.idea/runConfigurations/bin_www.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../maxpeep/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../maxpeep/util/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/modal/AcceptModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/animate.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../truckingjs/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../truckingjs/frontend/trucking-ui/src/components/roleAnon/registration.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../truckingjs/frontend/trucking-ui/src/constants/userActionType.js" afterDir="false" />
@@ -1482,12 +1482,16 @@
       <change beforePath="$PROJECT_DIR$/../React/node_modules/whatwg-fetch/fetch.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../React/node_modules/whatwg-fetch/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../React/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/userRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/addTaskForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/addTaskForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/lists/TaskList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/lists/TaskList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/modal/addTaskModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modal/addTaskModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/userIndexPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/userIndexPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/taskActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/taskActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/taskReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/taskReducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -1502,21 +1506,22 @@
     <session id="494600505">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.94" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
+          <entry key="css" value="3" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="4" />
-          <entry key="js" value="105" />
+          <entry key="js" value="117" />
           <entry key="json" value="5" />
           <entry key="tsx" value="1" />
           <entry key="www" value="1" />
@@ -1524,10 +1529,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
+          <entry key="CSS" value="3" />
           <entry key="HTML" value="4" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="106" />
+          <entry key="JavaScript" value="118" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript JSX" value="1" />
         </counts>
@@ -1536,7 +1541,7 @@
         <counts>
           <entry key="css" value="19" />
           <entry key="html" value="13" />
-          <entry key="js" value="12222" />
+          <entry key="js" value="14669" />
           <entry key="json" value="43" />
         </counts>
       </usages-collector>
@@ -1545,7 +1550,7 @@
           <entry key="CSS" value="19" />
           <entry key="HTML" value="13" />
           <entry key="JSON" value="43" />
-          <entry key="JavaScript" value="12222" />
+          <entry key="JavaScript" value="14669" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -1560,8 +1565,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/lists/TaskList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="74" column="56" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+            <state relative-caret-position="323">
+              <caret line="68" column="112" selection-start-line="68" selection-start-column="112" selection-end-line="68" selection-end-column="112" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -1570,10 +1575,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/reducers/taskReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/modal/AcceptModal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+            <state relative-caret-position="304">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -1582,22 +1614,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/modal/addTaskModal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/routes/userRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+            <state relative-caret-position="327">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -1608,12 +1628,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>props</find>
+      <find>console.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1635,23 +1657,24 @@
         <option value="$PROJECT_DIR$/backend/model/user.model.js" />
         <option value="$PROJECT_DIR$/frontend/src/App.css" />
         <option value="$PROJECT_DIR$/frontend/public/index.html" />
-        <option value="$PROJECT_DIR$/frontend/src/App.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/forms/addTime.js" />
-        <option value="$PROJECT_DIR$/frontend/src/constants/taskActionTypes.js" />
         <option value="$PROJECT_DIR$/frontend/src/reducers/allReducers.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/pages/myTasks.js" />
         <option value="$PROJECT_DIR$/backend/model/task.model.js" />
         <option value="$PROJECT_DIR$/backend/app.js" />
         <option value="$PROJECT_DIR$/backend/routes/registration.js" />
         <option value="$PROJECT_DIR$/backend/util/security.js" />
-        <option value="$PROJECT_DIR$/frontend/src/reducers/taskReducer.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/NavBar.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/modal/AcceptModal.js" />
+        <option value="$PROJECT_DIR$/backend/routes/userRouter.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/pages/userIndexPage.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/modal/addTaskModal.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/forms/addTaskForm.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/modal/AcceptModal.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/NavBar.js" />
+        <option value="$PROJECT_DIR$/frontend/src/animate.css" />
+        <option value="$PROJECT_DIR$/frontend/src/App.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/lists/TaskList.js" />
-        <option value="$PROJECT_DIR$/backend/routes/userRouter.js" />
+        <option value="$PROJECT_DIR$/frontend/src/constants/taskActionTypes.js" />
+        <option value="$PROJECT_DIR$/frontend/src/reducers/taskReducer.js" />
       </list>
     </option>
   </component>
@@ -1732,59 +1755,6 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="timeChecker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeChecker" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeChecker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeChecker" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeChecker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeChecker" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="lists" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeChecker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeChecker" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeChecker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeChecker" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeChecker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeChecker" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeChecker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeChecker" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -1796,6 +1766,7 @@
     <property name="SearchEverywhereHistoryKey" value="navbar&#9;FILE&#9;file:///home/prostrmk/Documents/Programs/JavaScript/timeChecker/frontend/src/components/NavBar.js&#10;taskred&#9;FILE&#9;file:///home/prostrmk/Documents/Programs/JavaScript/timeChecker/frontend/src/reducers/taskReducer.js&#10;index.html&#9;FILE&#9;file:///home/prostrmk/Documents/Programs/JavaScript/timeChecker/frontend/public/index.html&#10;useriNdexpage&#9;FILE&#9;file:///home/prostrmk/Documents/Programs/JavaScript/timeChecker/frontend/src/components/pages/userIndexPage.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/bin/www" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1837,27 +1808,27 @@
       <workItem from="1547389134373" duration="9529000" />
       <workItem from="1547486867673" duration="4722000" />
       <workItem from="1547889861321" duration="3300000" />
-      <workItem from="1547893777581" duration="15775000" />
+      <workItem from="1547893777581" duration="16754000" />
+      <workItem from="1547973107712" duration="9279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35678000" />
+    <option name="totallyTimeSpent" value="45936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="27" width="1875" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25970477" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26243848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Project Explorer" order="3" />
       <window_info id="Job Explorer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25436682" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1867,8 +1838,9 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="DB Execution Console" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.30349344" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.30283225" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1987,16 +1959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -2024,13 +1986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/registration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -2045,13 +2000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/reducers/taskReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/constants/userActionTypes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -2063,23 +2011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/constants/taskActionTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/NavBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2100,20 +2031,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/pages/userIndexPage.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/signInForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="266">
+          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/signInForm.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/NavBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        <state relative-caret-position="19">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/pages/userIndexPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -2122,38 +2060,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/addTaskForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="49" column="136" lean-forward="true" selection-start-line="49" selection-start-column="90" selection-end-line="49" selection-end-column="136" />
+        <state relative-caret-position="897">
+          <caret line="124" column="15" selection-start-line="124" selection-start-column="15" selection-end-line="124" selection-end-column="15" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/lists/TaskList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="74" column="56" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/modal/AcceptModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#1781#1797#0" />
+            <element signature="e#1824#1840#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/modal/addTaskModal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="95">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -2162,8 +2082,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/userRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        <state relative-caret-position="327">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/modal/AcceptModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="3602" column="16" lean-forward="true" selection-start-line="3602" selection-start-column="16" selection-end-line="3602" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/lists/TaskList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="68" column="112" selection-start-line="68" selection-start-column="112" selection-end-line="68" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/constants/taskActionTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/reducers/taskReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
         </state>
       </provider>
     </entry>

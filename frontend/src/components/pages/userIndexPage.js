@@ -14,7 +14,7 @@ export default class UserIndexPage extends Component {
     render() {
         return (
             <div>
-                <AddTaskModal updateFunc={this.loadTasks}/>
+                <AddTaskModal id={'create'} updateFunc={this.loadTasks}/>
                 <TaskList loadTasks={this.loadTasks}/>
             </div>
         );

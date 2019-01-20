@@ -1,64 +1,78 @@
 import React, {Component} from 'react';
-import {Row, Input, Button, Col} from 'react-materialize'
+import {Button, Col, Input, Row} from 'react-materialize'
 import axios from 'axios';
 import {NotificationManager} from 'react-notifications';
 import {SET_TASKS} from "../../constants/taskActionTypes";
 import connect from "react-redux/es/connect/connect";
+import $ from "jquery";
 
 export class AddTaskForm extends Component {
 
     constructor(props) {
         super(props);
-        if (this.props.task){
-            this.state = {
-                date: new Date(this.props.task.date).toDateString(),
-                task: this.props.task.content
-            };
-            console.log(this.props.task);
-        }else{
-            this.state = {
-                date: new Date(),
-                task: '',
-            };
+        this.state = {
+            date: '',
+            task: ''
         }
-
-
     }
 
-
-    changeInput = (e, valueDate) => {
-        let timeStamp = e.timeStamp;
-        if (e.target.id === 'date'){
+    componentDidMount(){
+        if (this.props.task){
             this.setState({
-                date: timeStamp
-            })
+                date: this.props.task.date,
+                task: this.props.task.content
+            });
         }else{
             this.setState({
-                [e.target.id]: e.target.value
-            })
+                date: '',
+                task: '',
+            });
         }
-
-    };
+    }
 
     confirm = async () => {
         let formData = new FormData();
         formData.append('date', this.state.date);
         formData.append('task', this.state.task);
         if (this.props.mode === 'edit'){
-            formData.append('id', this.props.task.id);
+            formData.append('id', this.props.task._id);
         }
-        let resp = await axios.post(`/api/user/${this.props.mode}Task`, formData,{headers: {auth: localStorage.getItem('Authorization')}}).then(response=>response).catch(err=>NotificationManager.warning(err.toString()));
-        if (resp.error){
-            NotificationManager.warning(resp.error);
-        }else{
-            NotificationManager.success("Success", "Added");
-            this.setState({
-                time: '',
-                date: '',
-                task: ''
-            });
-            this.props.setTasks(this.props.updateFunc());
-        }
+        let resp = await this.props.mode === 'edit' ? this.editRequest(formData) : this.createRequest(formData);
+        resp.then(resp=>{
+            if (resp.error){
+                NotificationManager.warning(resp.error);
+            }else{
+                NotificationManager.success("Success", "Added");
+                if (this.props.mode !== 'edit'){
+                    this.setState({
+                        time: '',
+                        date: '',
+                        task: ''
+                    });
+                }
+                let tasks = this.props.updateFunc();
+                this.props.setTasks(tasks);
+                let btns = document.querySelector('.modal-close');
+                for (let i = 0; i < btns.length; i++) {
+                    btns[i].click()
+                }
+            }
+        });
+
+    };
+
+    editRequest = async (formData) => {
+        return await axios.put(`/api/user/${this.props.mode}Task`, formData, {
+            headers:
+                {auth: localStorage.getItem('Authorization')}
+        }).then(response => response).catch(err => NotificationManager.warning(err.toString()));
+    };
+
+    createRequest = async (formData) => {
+        return await axios.post(`/api/user/${this.props.mode}Task`, formData, {
+            headers:
+                {auth: localStorage.getItem('Authorization')}
+        }).then(response => response).catch(err => NotificationManager.warning(err.toString()));
     };
 
     render() {
@@ -69,13 +83,17 @@ export class AddTaskForm extends Component {
                 <Row>
                     <Col s={4}/>
                     <Col s={4}>
-                        <Input id={'date'} name='on' type='date' label="Date" onChange={(e,value)=>this.changeInput(e,value)} />
+                        <Input value={this.state.date} type='date' placeholder="Date" onChange={(e,value)=>{
+                            this.setState({date: value});
+                        }} />
                     </Col>
                 </Row>
                 <Row>
                     <Col s={4}/>
                     <Col s={4}>
-                        <Input id={'task'} value={this.state.task} onChange={this.changeInput} label="Task"/>
+                        <Input value={this.state.task} onChange={e=>{
+                            this.setState({task: e.target.value})
+                        }} placeholder="Task"/>
                     </Col>
                 </Row>
                 <Row>

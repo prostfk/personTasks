@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {Row, Input, Button, Table, ProgressBar, Col} from 'react-materialize'
+import {Row, Icon, Button, Table, ProgressBar, Col} from 'react-materialize'
 import {NotificationManager} from 'react-notifications';
-import {SET_TASKS} from "../../constants/taskActionTypes";
+import {ORDER_ASC, SET_TASKS} from "../../constants/taskActionTypes";
 import {connect} from "react-redux";
 import AddTaskModal from "../modal/addTaskModal";
 import AcceptModal from "../modal/AcceptModal";
@@ -14,6 +14,10 @@ export class TaskList extends Component {
     };
 
     componentDidMount(){
+        this.updateList();
+    }
+
+    updateList = () => {
         if (this.props.loadTasks){
             this.props.loadTasks().then(data=>{
                 this.props.setTasks(data.data);
@@ -23,7 +27,7 @@ export class TaskList extends Component {
             this.setState({initial: false});
             NotificationManager.info("no content")
         }
-    }
+    };
 
 
     deleteFunc = async (id) => {
@@ -62,7 +66,7 @@ export class TaskList extends Component {
                                 <tbody>
                                 {
                                     this.props.tasks.map((task,index)=>{
-                                        return <tr key={index} style={{overFlow: 'hidden'}}>
+                                        return <tr key={index} style={{overFlow: 'hidden'}} className={'animated fadeInUp'}>
                                             <td width="8%"/>
                                             <td>{task.username}</td>
                                             <td>{(task.date)}</td>
@@ -70,6 +74,7 @@ export class TaskList extends Component {
                                             <td><AddTaskModal className={'amber accent-4'}
                                                               buttonText={'edit'}
                                                               task={task}
+                                                              updateFunc={this.updateList}
                                             /></td>
                                             <td><AcceptModal button={<Button className={'deep-orange darken-4'}>Delete</Button>}
                                             acceptFunc={this.deleteFunc}
@@ -100,6 +105,11 @@ const mapDispatchToProps = dispatch => {
             dispatch({
                 type: SET_TASKS, payload
             })
+        },
+        orderAsc: payload => {
+            dispatch(
+                {type: ORDER_ASC, payload}
+            )
         }
     });
 };

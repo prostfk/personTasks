@@ -9,7 +9,6 @@ export default class AddTaskModal extends Component {
         return (
             <div>
                 <Modal
-                    id={'add-task-modal'}
                     header={`${this.props.task ? 'Edit' : 'Add'} your task`}
                     fixedFooter
                     trigger={<Button className={this.props.className}>{
